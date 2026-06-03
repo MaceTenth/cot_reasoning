@@ -1,0 +1,224 @@
+
+══════════════════════════════════════════════════════════════════════════
+  SELF-CONSISTENCY LOOP  —  model: gpt-4o-mini  ×3 runs
+══════════════════════════════════════════════════════════════════════════
+
+  Runs       : 3  (parallel, temperature=0.8 for diversity)
+  Stages/run : 5
+  API calls  : 16  (3 × loop + 1 consensus)
+  Total time : 59.7s  (parallel run wall time + consensus)
+  Total cost : $0.0048
+  Tokens     : 13,507 prompt  /  4,703 completion
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 1/3  [56.9s  1508 tokens  $0.00154]
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" because of the
+    implications of the responses from the first two logicians.  1.
+    The first logician's response of "I don't know" indicates that
+    they want a drink; otherwise, they would have responded with "No"
+    if they did not want one. However, they are uncertain about the
+    desires of the other two logicians.  2. The second logician also
+    says "I don't know," which means they likewise want a drink but
+    are unsure about the third logician's desire. If they had known
+    that the third logician did not want a drink, they would have
+    answered "No."  3. Given that both the first and second logicians
+    want drinks, the third logician can deduce that their own desire
+    must also be for a drink. The only reason the first two are
+    uncertain is that they do not know the third logician's desire.
+    Thus, the third logician concludes that all three logicians want a
+    drink and responds confidently with "Yes." The reasoning is
+    supported by the logical deductions based on the prior responses.
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 2/3  [45.9s  1658 tokens  $0.00167]
+  ──────────────────────────────────────────────────────────────────────
+    The key to understanding the third logician's certainty lies in
+    the implications of the first two logicians' responses.   1. When
+    the first logician says "I don't know," this indicates that they
+    either do not want a drink themselves or are unsure about the
+    others' desires. If they did want a drink and knew that at least
+    one other logician did not want one, they would have answered
+    "No."  2. The second logician's response of "I don't know" further
+    suggests that they are aware of the first logician's uncertainty.
+    If the second logician wanted a drink and knew the first did too,
+    they would have responded "Yes." Therefore, their uncertainty
+    implies that at least one of the first two logicians does not want
+    a drink.  3. The third logician, hearing both "I don't know"
+    responses, can conclude that neither of the first two logicians is
+    in a position to affirm that all three want a drink. This implies
+    that they themselves must be the one who does want a drink.
+    Thus, the third logician can confidently say "Yes" because they
+    realize that the first two logicians' uncertainties indicate that
+    they themselves must want a drink, leading to the conclusion that
+    all three logicians want a drink. In summary, the third logician's
+    certainty is based on the process of elimination regarding the
+    desires of the first two logicians, not merely their responses.
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 3/3  [35.7s  1281 tokens  $0.00135]
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" because of the
+    implications of the first two logicians' responses.   1. When the
+    first logician says "I don't know," it means he either wants a
+    drink or is uncertain about the others' desires. If he did not
+    want one, he would have said "No."  2. The second logician also
+    says "I don't know," which indicates he cannot confirm if all
+    three want a drink. His uncertainty suggests he knows the first
+    logician is unsure, reinforcing that he too must want a drink or
+    he would have said "No."  3. Hearing both first and second
+    logicians express uncertainty leads the third logician to conclude
+    that they must both want a drink (since otherwise, they could each
+    confidently assert "No"). Knowing he himself wants a drink, he
+    confidently states that all three want a drink.  Therefore, the
+    third logician's conclusion is logically supported by the
+    responses of the first two logicians.
+
+  ──────────────────────────────────────────────────────────────────────
+  CONSENSUS ANSWER  (aggregated from 3 runs)
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" because of the
+    reasoning derived from the responses of the first two logicians.
+    1. When the first logician responds with "I don't know," it
+    implies that they must want a drink. If they did not want one,
+    they would have simply replied "No." Their uncertainty points to a
+    lack of knowledge about the desires of the other two logicians.
+    2. The second logician's "I don't know" similarly suggests that
+    they also want a drink. If they were aware that the first logician
+    wanted a drink and knew that the third logician did not want one,
+    they would also have answered "No." Thus, the second logician's
+    uncertainty indicates that they, too, are unsure about the third
+    logician's desire while simultaneously wanting a drink.  3. Given
+    both responses of uncertainty and the logical implications behind
+    them, the third logician can deduce that both the first and second
+    logicians must want a drink. Knowing this, along with their own
+    desire for a drink, the third logician can confidently conclude
+    that all three logicians want a drink and therefore responds
+    "Yes."  Thus, the clarity in the logical deductions laid out by
+    the responses makes the third logician's conclusion both certain
+    and justified.
+
+
+══════════════════════════════════════════════════════════════════════════
+  DIRECT PROMPT  —  o4-mini direct (native reasoning)
+══════════════════════════════════════════════════════════════════════════
+
+  Time   : 14.7s
+  Cost   : $0.0099
+  Tokens : 70 prompt  /  2,222 completion  /  1,792 reasoning (hidden)
+
+  ──────────────────────────────────────────────────────────────────────
+  ANSWER
+  ──────────────────────────────────────────────────────────────────────
+    Here’s the step‐by‐step reasoning.  Call the three logicians A
+    (first), B (second) and C (third), and let “I want a drink” for
+    each be a Boolean true/false.  The bartender’s question is really
+    asking        “Is (A wants) AND (B wants) AND (C wants) true?”
+    1)  First logician (A) is asked “Are all three of you thirsty?”
+    - He knows his own desire A.      - If A were false (he didn’t
+    want a drink), then certainly “A AND B AND C” is false, so he
+    could immediately answer “No.”      - Instead he answers “I don’t
+    know.”      ⇒ Conclusion by all observers: A must be true (he does
+    want a drink).    2)  Second logician (B) now goes.  He’s heard A
+    say “I don’t know,” so he knows A=true.  He also knows his own
+    desire B.      - If B were false, then A∧B∧C = true∧false∧C =
+    false, so he would answer “No.”      - But he says “I don’t know.”
+    ⇒ Conclusion by all observers: B must be true.    3)  Third
+    logician (C) now goes.  He’s heard two “I don’t know”s, so he
+    knows A=true and B=true.  He also knows his own desire C.      -
+    Now “A AND B AND C” is just true∧true∧C = C.      - Since he does
+    want a drink (C=true), he can now definitively answer “Yes.”
+    Thus the successive “I don’t know”s force A and B to be true, and
+    leaves C with only his own thirst to check.  That’s why the third
+    logician can be certain that all three want drinks, and says
+    “Yes.”
+
+
+══════════════════════════════════════════════════════════════════════════
+  DIRECT PROMPT  —  gpt-5.5 direct (chat only)
+══════════════════════════════════════════════════════════════════════════
+
+  Time   : 9.5s
+  Cost   : $0.0177
+  Tokens : 70 prompt  /  580 completion  /  192 reasoning (hidden)
+
+  ──────────────────────────────────────────────────────────────────────
+  ANSWER
+  ──────────────────────────────────────────────────────────────────────
+    Assume each logician knows whether **they personally** want a
+    drink, but they do not initially know what the others want.  The
+    bartender asks:  > “Do all three of you want a drink?”  That
+    question has answer **Yes** only if all three want one. If even
+    one does not, the answer is **No**.  Step by step:  1. **First
+    logician says, “I don’t know.”**      - If the first logician did
+    **not** want a drink, he would know the answer is **No**, because
+    not all three would want one.      - But he says he doesn’t know.
+    - Therefore, the first logician **must want a drink**, but he
+    doesn’t know about the other two.  2. **Second logician hears this
+    and says, “I don’t know.”**      - The second now knows the first
+    logician wants a drink.      - If the second logician did **not**
+    want a drink, he would know the answer is **No**.      - But he
+    says he doesn’t know.      - Therefore, the second logician **must
+    also want a drink**, but he doesn’t know about the third.  3.
+    **Third logician hears both answers.**      - From the first
+    answer, he knows the first logician wants a drink.      - From the
+    second answer, he knows the second logician wants a drink.      -
+    The third logician also knows whether **he himself** wants a
+    drink.  4. Since the third logician does want a drink, he can
+    conclude:      - First wants one.      - Second wants one.      -
+    Third wants one.      - Therefore, **all three want a drink**.  So
+    the third logician can confidently answer:  > “Yes.”
+
+
+══════════════════════════════════════════════════════════════════════════
+  COMPARISON SUMMARY
+══════════════════════════════════════════════════════════════════════════
+  Approach                                      Time  API calls   Tokens      Cost
+  ────────────────────────────────────────────────────────────────────────────
+  gpt-4o-mini × 3 runs + consensus             59.7s         16   18,210   $0.0048
+  o4-mini direct (native reasoning)            14.7s          1    2,292   $0.0099
+  gpt-5.5 direct (chat only)                    9.5s          1      650   $0.0177
+  ────────────────────────────────────────────────────────────────────────────
+
+  WHAT TO LOOK FOR
+  ─────────────────
+  • Does majority-voting lift the weak model to match native reasoning?
+  • How much does N runs cost vs a single o4-mini call?
+  • Does consensus answer clearly pick up the best run's reasoning?
+  • Where does the weak model consistently go wrong across all runs?
+
+
+══════════════════════════════════════════════════════════════════════════
+  ⚖️   CORRECTNESS EVALUATION  (judge: gpt-4o)
+══════════════════════════════════════════════════════════════════════════
+
+  Judge cost: $0.0074  (4.3s)
+
+  Approach                                  Correct   Reason  Complete  TOTAL  Verdict
+  ────────────────────────────────────────────────────────────────────────────────
+  gpt-4o-mini  d 3 runs (self-consistency)       10/10        9/10        10/10     29/30  ✅ correct
+  o4-mini direct (native reasoning)              10/10       10/10        10/10     30/30  ✅ correct
+  gpt-5.5 direct (chat only)                     10/10        9/10        10/10     29/30  ✅ correct
+  ────────────────────────────────────────────────────────────────────────────────
+
+  🏆  Winner : o4-mini direct (native reasoning)
+
+  Judge notes: The 'o4-mini direct' answer stands out for its precise logical structure and clarity. While all answers are correct and complete, 'o4-mini direct' offers a clearer logical progression, making it slightly more refined than the others.
+
+  [gpt-4o-mini  d 3 runs (self-consistency)]
+    The answer correctly explains the logic behind each logician's
+    response and why the third can be certain that all want a drink.
+    It is clear and nearly complete, missing only a slightly more
+    explicit connection between uncertainty and desire for a drink.
+
+  [o4-mini direct (native reasoning)]
+    The answer is perfectly correct, providing a clear and step-by-
+    step logical analysis for how each response contributes to the
+    third logician's certainty. It uses precise logical language,
+    making it highly complete.
+
+  [gpt-5.5 direct (chat only)]
+    The answer accurately explains the reasoning process behind the
+    logicians' replies. It is generally clear and complete, but the
+    reasoning could be slightly more logically structured for clarity.
+

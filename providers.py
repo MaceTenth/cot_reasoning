@@ -37,8 +37,9 @@ PRICE_TABLE: dict[str, tuple[float, float]] = {
     "gpt-5.4-mini":         ( 0.75,    4.50),
     "gpt-5.4-nano":         ( 0.20,    1.25),
     "gpt-5.4-pro":          (30.00,  180.00),
+    "gpt-4o-mini":          ( 0.15,    0.60),   # must come before gpt-4o to avoid prefix collision
     "gpt-4o":               ( 2.50,   10.00),
-    "gpt-4o-mini":          ( 0.15,    0.60),
+    "o4-mini":              ( 1.10,    4.40),   # $1.10/MTok in, $4.40/MTok out
     "gpt-4.1":              ( 2.00,    8.00),
     "o3":                   (10.00,   40.00),
     # Anthropic — verified 2026-06-03 https://docs.anthropic.com/en/about-claude/pricing

@@ -1,0 +1,150 @@
+
+══════════════════════════════════════════════════════════════════════════
+  SELF-CONSISTENCY LOOP  —  model: gpt-4o-mini  ×3 runs
+══════════════════════════════════════════════════════════════════════════
+
+  Runs       : 3  (parallel, temperature=0.8 for diversity)
+  Stages/run : 5
+  API calls  : 16  (3 × loop + 1 consensus)
+  Total time : 62.7s  (parallel run wall time + consensus)
+  Total cost : $0.0053
+  Tokens     : 14,561 prompt  /  5,230 completion
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 1/3  [51.4s  1518 tokens  $0.00156]
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" to the bartender's
+    question about whether all three want a drink due to the following
+    reasoning:  1. The first logician's response of "I don't know"
+    indicates that he either wants a drink or is uncertain about the
+    desires of the other two. If he did not want a drink, he would
+    have been able to confidently answer "No."  2. The second logician
+    also says "I don't know," which suggests he too either wants a
+    drink or is uncertain about the third logician's preference. If
+    the second logician did not want a drink, he could have also
+    confidently answered "No" based on the first logician's
+    uncertainty.  3. The combined uncertainty of both the first and
+    second logicians informs the third logician that neither of them
+    can assert that not all three want a drink.  4. Given this
+    context, the third logician deduces that since both of the others
+    expressed uncertainty rather than negation, they must want a
+    drink. Therefore, he can confidently conclude that all three
+    logicians want a drink.  Thus, the third logician's response of
+    "Yes" is logically supported by the responses of the first two
+    logicians.
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 2/3  [35.2s  1690 tokens  $0.00173]
+  ──────────────────────────────────────────────────────────────────────
+    The reasoning behind the third logician's confident assertion of
+    "Yes" can be understood through the responses of the first two
+    logicians.   1. The first logician says "I don't know," which
+    implies that they must want a drink. If they did not want a drink,
+    they would know that not all three could want one, and thus they
+    would have answered "No."  2. The second logician also says "I
+    don't know." This response indicates that they must also want a
+    drink, as their uncertainty suggests they are contemplating the
+    third logician's desire alongside their own. If the second
+    logician did not want a drink, they could confidently say "No" as
+    well.  3. Given that both the first and second logicians want
+    drinks, the third logician can confidently conclude that all three
+    must want a drink. The first two logicians' uncertainties stem
+    from not knowing the third's desire, but the third logician,
+    recognizing that both others want drinks, can assert "Yes."  Thus,
+    the third logician is justified in their certainty that all three
+    want a drink based on the logical implications of the previous
+    responses.
+
+  ──────────────────────────────────────────────────────────────────────
+  Run 3/3  [58.6s  1727 tokens  $0.00172]
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" to the bartender's
+    question about whether all three logicians want a drink, based on
+    the responses of the first two logicians. Here's the reasoning:
+    1. The first logician says "I don't know," which implies that
+    either they do not want a drink or they are unsure about the
+    desires of the other two logicians. If the first logician wanted a
+    drink but knew that at least one of the others did not want one,
+    they could have confidently answered "No."  2. The second logician
+    also says "I don't know," indicating similar uncertainty. This
+    means they could either want a drink and are unsure about the
+    third logician, or they do not want one themselves. If they knew
+    that the first logician wanted a drink and they themselves wanted
+    one too, they could have logically concluded that the third
+    logician also wanted a drink.  3. When the third logician hears
+    both of these responses, they recognize that since both the first
+    and second logicians did not definitively say "No," it suggests
+    that all three must indeed want a drink. If either of the first
+    two logicians did not want a drink, they would have been able to
+    state that clearly.  Thus, the third logician can conclude with
+    certainty that all three logicians want a drink because the lack
+    of a definitive "No" from the first two indicates that the
+    possibility of all wanting a drink remains intact. Therefore, the
+    answer is "Yes."
+
+  ──────────────────────────────────────────────────────────────────────
+  CONSENSUS ANSWER  (aggregated from 3 runs)
+  ──────────────────────────────────────────────────────────────────────
+    The third logician can confidently say "Yes" to the bartender's
+    question about whether all three logicians want a drink, based on
+    the reasoning derived from the responses of the first two
+    logicians.  1. The first logician's answer of "I don't know"
+    suggests that they either want a drink or are uncertain about the
+    preferences of the other two. If the first logician did not want a
+    drink, they would be able to definitively say "No," thus
+    eliminating the possibility that all three logicians want a drink.
+    2. The second logician's response of "I don't know" carries a
+    similar implication. It indicates that the second logician either
+    wants a drink or is uncertain about the third logician's desire.
+    If the second logician did not want a drink, they too would have
+    said "No," negating the possibility that all three want drinks.
+    3. Given that both the first and second logicians expressed
+    uncertainty rather than a negation, the third logician deduces
+    that neither of the first two can confidently say that not all
+    logicians want a drink. This uncertainty implies that both must
+    indeed want a drink, as they are not excluding that possibility.
+    4. Therefore, the third logician concludes that since neither of
+    the other two could indicate a "No," they can assert with
+    certainty that all three of them must want a drink.   Thus, the
+    third logician is justified in confidently responding "Yes" to the
+    bartender.
+
+
+══════════════════════════════════════════════════════════════════════════
+  COMPARISON SUMMARY
+══════════════════════════════════════════════════════════════════════════
+  Approach                                      Time  API calls   Tokens      Cost
+  ────────────────────────────────────────────────────────────────────────────
+  gpt-4o-mini × 3 runs + consensus             62.7s         16   19,791   $0.0053
+  ────────────────────────────────────────────────────────────────────────────
+
+  WHAT TO LOOK FOR
+  ─────────────────
+  • Does majority-voting lift the weak model to match native reasoning?
+  • How much does N runs cost vs a single o4-mini call?
+  • Does consensus answer clearly pick up the best run's reasoning?
+  • Where does the weak model consistently go wrong across all runs?
+
+
+══════════════════════════════════════════════════════════════════════════
+  ⚖️   CORRECTNESS EVALUATION  (judge: gpt-4o)
+══════════════════════════════════════════════════════════════════════════
+
+  Judge cost: $0.0034  (2.8s)
+
+  Approach                                  Correct   Reason  Complete  TOTAL  Verdict
+  ────────────────────────────────────────────────────────────────────────────────
+  gpt-4o-mini × 3 runs (self-consistency)        10/10       10/10        10/10     30/30  ✅ correct
+  ────────────────────────────────────────────────────────────────────────────────
+
+  🏆  Winner : gpt-4o-mini × 3 runs (self-consistency)
+
+  Judge notes: This answer correctly follows the logical deductions needed to solve the problem and explains the reasoning process comprehensively, without omitting any crucial steps.
+
+  [gpt-4o-mini × 3 runs (self-consistency)]
+    This answer accurately explains the logic puzzle by clearly
+    outlining the step-by-step deductions made by each logician. It
+    thoroughly addresses the reasoning process, leading to the third
+    logician's certainty, and thereby provides a complete resolution
+    to the problem.
+
