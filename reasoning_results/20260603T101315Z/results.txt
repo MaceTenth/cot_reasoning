@@ -1,0 +1,489 @@
+
+════════════════════════════════════════════════════════════════════════
+  REASONING MODEL DEMO
+════════════════════════════════════════════════════════════════════════
+
+  Run      : 20260603T101315Z
+  Task     : A farmer needs to cross a river with a fox, a chicken, and a bag of grain. His boat can carry only himself and one other item. If left alone together: the fox eats the chicken, and the chicken eats the grain. How does the farmer get everything across safely? List every single crossing step, and explain why each step is necessary.
+
+════════════════════════════════════════════════════════════════════════
+  openai  model=o4-mini  effort=low
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 10.7s
+  💰  Cost : $0.0028
+  🔢  Tokens → prompt: 78   completion: 628   reasoning: 128
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  OpenAI  128 reasoning tokens consumed internally.
+  (The reasoning text itself is NOT returned by the OpenAI API.)
+  You only see the final answer below.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      Here is a step-by-step solution.  At every moment, check that neither the fox and the chicken nor the chicken and the grain are left alone together without the farmer present.
+      
+      1.  Farmer takes the chicken to the far (right) bank.  
+          • Left behind on the near (left) bank: fox + grain (safe together).  
+          • On the far bank: chicken.  
+      
+      2.  Farmer returns alone to the near bank.  
+          • Far bank now has the chicken alone (safe).  
+          • Near bank has fox + grain + farmer.  
+      
+      3.  Farmer takes the fox to the far bank.  
+          • Near bank now has only the grain (safe).  
+          • Far bank has chicken + fox + farmer—unsafe if left unguarded, so we act immediately.  
+      
+      4.  Farmer leaves the fox on the far bank but brings the chicken back to the near bank.  
+          • Far bank has fox alone (safe).  
+          • Near bank has chicken + grain + farmer.  
+          • This prevents the fox from eating the chicken on the far bank, and also keeps the chicken from eating the grain on the near bank while the farmer steps away.  
+      
+      5.  Farmer takes the grain across to the far bank.  
+          • Near bank now has only the chicken (safe).  
+          • Far bank has fox + grain + farmer (safe: fox doesn’t eat grain).  
+      
+      6.  Farmer returns alone to the near bank.  
+          • Far bank now has fox + grain alone (safe).  
+          • Near bank has chicken + farmer.  
+      
+      7.  Farmer takes the chicken to the far bank one last time.  
+          • Now all three—the fox, the chicken, and the grain—are on the far bank safely.  
+      
+      Why each move is necessary:  
+      - Step 1 starts by removing the chicken from harm (it’s vulnerable to both fox and grain).  
+      - Step 3 brings over the fox while the grain alone is harmless on the near bank.  
+      - Step 4 brings the chicken back so the farmer never leaves fox+chicken or chicken+grain alone together.  
+      - Step 5 deposits the grain where the fox is already waiting harmlessly.  
+      - Steps 6–7 reunite the farmer with the chicken and finish the crossing.
+
+
+════════════════════════════════════════════════════════════════════════
+  openai  model=o4-mini  effort=medium
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 7.6s
+  💰  Cost : $0.0045
+  🔢  Tokens → prompt: 78   completion: 1,007   reasoning: 448
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  OpenAI  448 reasoning tokens consumed internally.
+  (The reasoning text itself is NOT returned by the OpenAI API.)
+  You only see the final answer below.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      Here is a step‐by‐step solution in seven one‐item crossings.  After each move we show who’s on the Left (L) bank and who’s on the Right (R) bank, and we explain why we choose that move to avoid leaving dangerous pairs alone.
+      
+      Initial state:  
+      L: Farmer, Fox, Chicken, Grain  
+      R: –  
+      
+      1) Farmer takes the Chicken to the Right.  
+         Move: L → R with Chicken  
+         Result:  
+           L: Fox, Grain  
+           R: Farmer, Chicken  
+         Why? Fox and Grain left alone on L are safe together; Chicken must be removed first or it would be eaten by the Fox if left with it.
+      
+      2) Farmer returns alone to the Left.  
+         Move: R → L alone  
+         Result:  
+           L: Farmer, Fox, Grain  
+           R: Chicken  
+         Why? Leaving Chicken alone on R is safe; Farmer must go back to fetch one of Fox or Grain.
+      
+      3) Farmer takes the Fox to the Right.  
+         Move: L → R with Fox  
+         Result:  
+           L: Grain  
+           R: Farmer, Fox, Chicken  
+         Why? We cannot leave Farmer behind with both Chicken and Grain (Chicken would eat Grain), so we take Fox.  Note: We cannot leave Fox with Chicken, so we’ll immediately undo that next.
+      
+      4) Farmer brings the Chicken back to the Left.  
+         Move: R → L with Chicken  
+         Result:  
+           L: Farmer, Chicken, Grain  
+           R: Fox  
+         Why? If we left Fox alone with Chicken on R, Fox would eat Chicken.  Returning the Chicken resolves that.
+      
+      5) Farmer takes the Grain to the Right.  
+         Move: L → R with Grain  
+         Result:  
+           L: Chicken  
+           R: Farmer, Fox, Grain  
+         Why? Now Grain goes safely; on L only Chicken is left alone, which is fine.
+      
+      6) Farmer returns alone to the Left.  
+         Move: R → L alone  
+         Result:  
+           L: Farmer, Chicken  
+           R: Fox, Grain  
+         Why? Fox and Grain on R are safe together; Farmer must fetch the Chicken.
+      
+      7) Farmer takes the Chicken to the Right.  
+         Move: L → R with Chicken  
+         Result:  
+           L: –  
+           R: Farmer, Fox, Chicken, Grain  
+         Why? Finally moves the Chicken over; no forbidden pair is ever left alone.
+      
+      At every step, we avoided leaving (Fox+Chicken) or (Chicken+Grain) alone without the Farmer.
+
+
+════════════════════════════════════════════════════════════════════════
+  openai  model=o4-mini  effort=high
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 18.4s
+  💰  Cost : $0.0138
+  🔢  Tokens → prompt: 78   completion: 3,122   reasoning: 2,368
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  OpenAI  2,368 reasoning tokens consumed internally.
+  (The reasoning text itself is NOT returned by the OpenAI API.)
+  You only see the final answer below.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      Here is a step-by-step solution.  I’ll denote the near (starting) bank as “Left” and the far bank as “Right.”  At every point I’ll list who’s on each bank, what the farmer does, and why that move is forced (i.e. avoids any forbidden pairing).
+      
+      Initial state  
+      Left bank: Fox, Chicken, Grain    Right bank: –  
+      
+      1) Farmer takes Chicken from Left → Right.  
+         New state:  
+           Left = Fox, Grain Right = Chicken  
+         Why?  
+           ‑ If he took Fox first, Left would have Chicken+Grain → chicken would eat grain.  
+           ‑ If he took Grain first, Left would have Fox+Chicken → fox would eat chicken.  
+           So he must carry Chicken first, leaving Fox & Grain (a safe pair) on the Left.
+      
+      2) Farmer returns alone from Right → Left.  
+         State:  
+           Left = Fox, Grain Right = Chicken  
+         Why is it safe?  
+           ‑ On Left: Fox & Grain alone – fox doesn’t eat grain.  
+           ‑ On Right: Chicken alone – nothing to eat or be eaten.
+      
+      3) Farmer takes Fox from Left → Right.  
+         New state:  
+           Left = Grain Right = Chicken, Fox  
+         Why not take Grain now?  
+           If he took Grain instead, Left would have Chicken alone (safe) but Right would have Fox+Grain (safe), so that might look OK—but then he’d have to leave Chicken+Grain on one bank at some later point anyway.  The standard route is to move Fox now so that the predator isn’t left behind to eat chicken or grain in the next steps.
+      
+      4) Farmer takes Chicken from Right → Left.  
+         State:  
+           Left = Chicken, Grain Right = Fox  
+         Why bring Chicken back?  
+           Because if he left Chicken with Fox on the Right, Fox would eat Chicken.  Bringing Chicken back leaves Fox alone on Right (safe) and Chicken+Grain on Left (still safe as long as the farmer is present).
+      
+      5) Farmer takes Grain from Left → Right.  
+         State:  
+           Left = Chicken Right = Fox, Grain  
+         Why take Grain now?  
+           It’s the only item on Left besides Chicken, and Chicken mustn’t be left alone with Grain.  Taking Grain leaves Chicken alone on Left (safe), and Fox+Grain on Right (fox doesn’t eat grain).
+      
+      6) Farmer returns alone from Right → Left.  
+         State:  
+           Left = Chicken Right = Fox, Grain  
+         Why is it safe?  
+           ‑ On Right: Fox & Grain alone – safe.  
+           ‑ On Left: Chicken alone – safe.
+      
+      7) Farmer takes Chicken from Left → Right.  
+         Final state:  
+           Left = – Right = Fox, Chicken, Grain  
+         Everyone is across safely.
+      
+      Summary of crossings (F = farmer, C = chicken, F x = fox, G = grain):
+      
+       1. F+C →  
+       2. F ←  
+       3. F+Fx →  
+       4. F+C ←  
+       5. F+G →  
+       6. F ←  
+       7. F+C →  
+      
+      At no point are fox & chicken or chicken & grain left alone without the farmer to supervise.
+
+
+════════════════════════════════════════════════════════════════════════
+  anthropic  model=claude-sonnet-4-6  effort=low
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 10.6s
+  💰  Cost : $0.0071
+  🔢  Tokens → prompt: 110   completion: 451   reasoning: 1,024
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  Anthropic extended thinking  (11 words, full text exposed by API)
+
+      The classic river crossing puzzle. Let me work through this systematically.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      # The River Crossing Solution
+      
+      ## The Core Problem
+      Two dangerous pairings exist:
+      - Fox + Chicken = fox eats chicken
+      - Chicken + Grain = chicken eats grain
+      - Fox + Grain = safe (foxes don't eat grain)
+      
+      The chicken is the problem animal since it conflicts with BOTH other items.
+      
+      ---
+      
+      ## Every Crossing Step
+      
+      **Trip 1: Farmer takes Chicken →**
+      *Why necessary: The chicken can't be left with either the fox or the grain, so it must go first. This is the only safe starting move.*
+      
+      **Trip 2: Farmer returns alone ←**
+      *Why necessary: Someone has to drive the boat back.*
+      
+      **Trip 3: Farmer takes Fox →**
+      *Why: Fox and grain are safe together on the starting side. Fox gets delivered.*
+      
+      **Trip 4: Farmer returns WITH Chicken ←**
+      *Why this is the key move: If farmer just left, the fox would eat the chicken. So the chicken comes BACK. This is the non-obvious step most people miss.*
+      
+      **Trip 5: Farmer takes Grain →**
+      *Why: Chicken is safely back on the starting side alone. Now fox and grain are together, which is safe.*
+      
+      **Trip 6: Farmer returns alone ←**
+      *Why necessary: Must go back for the chicken.*
+      
+      **Trip 7: Farmer takes Chicken →**
+      *Why: Final trip. Everything is now safely across.*
+      
+      ---
+      
+      ## End State
+      ✓ Fox on far side
+      ✓ Grain on far side
+      ✓ Chicken on far side
+      ✓ Nothing was eaten
+      
+      ---
+      
+      ## The Key Insight
+      The solution requires **bringing the chicken back** on Trip 4, which feels counterintuitive. Most people get stuck because they assume every trip should make "forward progress." The trick is accepting temporary backward movement to prevent an impossible conflict.
+
+
+════════════════════════════════════════════════════════════════════════
+  anthropic  model=claude-sonnet-4-6  effort=medium
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 19.2s
+  💰  Cost : $0.0154
+  🔢  Tokens → prompt: 110   completion: 1,003   reasoning: 5,000
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  Anthropic extended thinking  (224 words, full text exposed by API)
+
+      This is the classic river crossing puzzle. Let me work through it systematically.
+      
+      The constraints:
+      - Fox + Chicken alone = fox eats chicken
+      - Chicken + Grain alone = chicken eats grain
+      - Fox + Grain alone = safe (fox doesn't eat grain)
+      
+      The key insight is that the chicken is the problem item - it can't be left with either the fox or the grain. So the farmer must always either have the chicken with him or leave the chicken alone on one side while the fox and grain are together (which is safe).
+      
+      The solution requires 7 crossings:
+      
+      **Starting state:** Farmer, Fox, Chicken, Grain all on Left bank. Nothing on Right bank.
+      
+      
+      **Step 1:** Farmer takes Chicken across first since it's the critical item that can't be left with anything else.
+      **Step 2:** Farmer returns alone to retrieve another item.
+      **Step 3:** Farmer brings the Fox across, but here's the crucial move - he brings the Chicken back with him to prevent it from being left with the Fox.
+      **Step 4:** Farmer takes the Grain across next.
+      **Step 5:** Farmer returns alone one more time.
+      **Step 6:** Finally, Farmer brings the Chicken across to complete the puzzle.
+      
+      There's also a valid alternative where the Grain goes in step 3 instead of the Fox, with the same backtracking pattern for the Chicken.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      ## The River Crossing Solution
+      
+      **Starting position:** Everyone on the LEFT bank. Right bank is empty.
+      
+      ---
+      
+      ### The Core Problem First
+      The **chicken is the conflict point** — it cannot be left with the fox OR the grain. The fox and grain CAN be left together safely. This drives every decision.
+      
+      ---
+      
+      ### The 7 Crossings
+      
+      | # | Direction | Carrying | Left Bank | Right Bank | Why |
+      |---|-----------|----------|-----------|------------|-----|
+      | 1 | → | **Chicken** | Fox, Grain | Chicken | Chicken can't be left with either — it must go first |
+      | 2 | ← | **Nothing** | Fox, Grain, Farmer | Chicken | Must return to retrieve another item |
+      | 3 | → | **Fox** | Grain | Fox, Chicken | Fox & grain are safe alone together on left |
+      | 4 | ← | **Chicken** | Grain, Chicken | Fox | **Critical:** Can't leave fox & chicken together — must "undo" that pairing |
+      | 5 | → | **Grain** | Chicken | Fox, Grain | Fox & grain are safe together; chicken is alone |
+      | 6 | ← | **Nothing** | Chicken, Farmer | Fox, Grain | Must return one final time for the chicken |
+      | 7 | → | **Chicken** | *Empty* | **All three** | Done ✓ |
+      
+      ---
+      
+      ### Why Step 4 Is the Non-Obvious Move
+      Most people get stuck because bringing the chicken **back** feels like going backward. It is — deliberately. It's the only way to separate the fox from the chicken without abandoning the grain to the chicken.
+      
+      ---
+      
+      ### The Underlying Logic
+      > **Never leave the chicken unsupervised with anything.**
+      > When forced to set the chicken down, it must be **alone**.
+
+
+════════════════════════════════════════════════════════════════════════
+  anthropic  model=claude-sonnet-4-6  effort=high
+════════════════════════════════════════════════════════════════════════
+
+  ⏱  Time : 20.4s
+  💰  Cost : $0.0183
+  🔢  Tokens → prompt: 110   completion: 1,201   reasoning: 16,000
+
+  ──────────────────────────────────────────────────────────────────
+  🧠  REASONING
+  ──────────────────────────────────────────────────────────────────
+  Anthropic extended thinking  (261 words, full text exposed by API)
+
+      This is the classic river crossing puzzle. Let me work through it carefully.
+      
+      Starting state: Farmer, Fox, Chicken, Grain all on the LEFT bank.
+      Goal: All on the RIGHT bank.
+      
+      The constraints:
+      - Fox + Chicken alone = fox eats chicken
+      - Chicken + Grain alone = chicken eats grain
+      - Fox + Grain alone = safe (fox doesn't eat grain)
+      
+      The key insight is that the chicken is the problem item - it can't be left with either the fox or the grain.
+      
+      Solution:
+      
+      **Step 1:** Farmer takes Chicken across to RIGHT bank.
+      
+      
+      Left bank: Fox, Grain
+      Right bank: Chicken
+      
+      **Step 2:** Farmer returns alone to LEFT bank.
+      
+      **Step 3:** Farmer takes Fox across to RIGHT bank, but then brings the Chicken back to LEFT bank—this is the crucial move that prevents the fox and chicken from being left together on the right side.
+      
+      **Step 4:** Farmer takes Grain across to RIGHT bank, where it can safely stay with the fox.
+      
+      **Step 5:** Farmer returns alone to LEFT bank.
+      
+      **Step 6:** Farmer takes the Chicken across to RIGHT bank for the final time.
+      
+      That's 7 crossings total. There's also an alternative approach where you transport the grain first instead of the fox in step 3, then adjust the remaining moves accordingly.
+      
+      Alternative solution:
+      **Step 1:** Take chicken across.
+      **Step 2:** Return alone.
+      **Step 3:** Take grain across.
+      **Step 4:** Bring chicken back.
+      **Step 5:** Take fox across.
+      **Step 6:** Return alone.
+      **Step 7:** Take chicken across.
+      
+      Both strategies require exactly 7 crossings and successfully get everything to the right bank.
+
+  ──────────────────────────────────────────────────────────────────
+  📝  FINAL ANSWER
+  ──────────────────────────────────────────────────────────────────
+      # The River Crossing Solution
+      
+      ## Starting State
+      **Left bank:** Farmer, Fox, Chicken, Grain | **Right bank:** empty
+      
+      ---
+      
+      ## The 7 Crossings
+      
+      **Crossing 1 → Take the Chicken across**
+      - Left: Fox, Grain | Right: Chicken
+      - *Why necessary:* The chicken is the core problem — it conflicts with BOTH other items. Fox and grain are safe together, so start by removing the chicken from that group.
+      
+      **Crossing 2 ← Return alone**
+      - Left: Farmer, Fox, Grain | Right: Chicken
+      - *Why necessary:* The boat can't cross empty; farmer must go back for remaining items.
+      
+      **Crossing 3 → Take the Fox across**
+      - Left: Grain | Right: Fox, Chicken
+      - *Why necessary:* Must take something. Grain is safe alone on the left.
+      
+      **Crossing 4 ← Bring the Chicken BACK** ⬅️ *(The key non-obvious move)*
+      - Left: Farmer, Chicken, Grain | Right: Fox
+      - *Why necessary:* You cannot leave the fox and chicken unattended together on the right. Bringing the chicken back is the only way to "break the deadlock."
+      
+      **Crossing 5 → Take the Grain across**
+      - Left: Chicken | Right: Fox, Grain
+      - *Why necessary:* Fox and grain are safe together; grain must now move over.
+      
+      **Crossing 6 ← Return alone**
+      - Left: Farmer, Chicken | Right: Fox, Grain
+      - *Why necessary:* Chicken remains on the left; farmer must retrieve it.
+      
+      **Crossing 7 → Take the Chicken across**
+      - Left: empty | Right: **Fox, Chicken, Grain ✓**
+      
+      ---
+      
+      ## Why This Works
+      | Left alone | Safe? |
+      |---|---|
+      | Fox + Grain | ✅ Yes |
+      | Fox + Chicken | ❌ No |
+      | Chicken + Grain | ❌ No |
+      
+      The chicken **never sits unattended with either other item** at any step. The counterintuitive move (Step 4 — bringing the chicken *back*) is essential because it's the only way to shuttle both the fox and grain across without conflict.
+
+
+════════════════════════════════════════════════════════════════════════
+  SUMMARY — effort level comparison
+════════════════════════════════════════════════════════════════════════
+  Provider     Model                        Effort      Time  ThinkTok  OutTok  Words     Cost
+  ────────────────────────────────────────────────────────────────────
+  openai       o4-mini                      low        10.7s       128     628    351  $0.0028
+  openai       o4-mini                      medium      7.6s       448   1,007    348  $0.0045
+  openai       o4-mini                      high       18.4s     2,368   3,122    464  $0.0138
+  anthropic    claude-sonnet-4-6            low        10.6s     1,024     451    279  $0.0071
+  anthropic    claude-sonnet-4-6            medium     19.2s     5,000   1,003    292  $0.0154
+  anthropic    claude-sonnet-4-6            high       20.4s    16,000   1,201    314  $0.0183
+  ────────────────────────────────────────────────────────────────────
+
+  KEY OBSERVATIONS
+  ─────────────────
+  • anthropic: high effort is 1.9× slower than low effort
+  • anthropic: high effort is 2.6× more expensive than low effort
+  • openai: high effort is 1.7× slower than low effort
+  • openai: high effort is 4.9× more expensive than low effort
+

@@ -29,19 +29,30 @@ class ModelResult:
 # fmt: (input_per_1M, output_per_1M)
 # ---------------------------------------------------------------------------
 PRICE_TABLE: dict[str, tuple[float, float]] = {
-    # OpenAI
-    "gpt-5.5":              (75.00,  300.00),
+    # OpenAI — verified 2026-06-03 https://openai.com/api/pricing/
+    # Standard tier, short context window pricing
+    "gpt-5.5":              ( 5.00,   30.00),  # $5/MTok in, $30/MTok out
+    "gpt-5.5-pro":          (30.00,  180.00),
+    "gpt-5.4":              ( 2.50,   15.00),
+    "gpt-5.4-mini":         ( 0.75,    4.50),
+    "gpt-5.4-nano":         ( 0.20,    1.25),
+    "gpt-5.4-pro":          (30.00,  180.00),
     "gpt-4o":               ( 2.50,   10.00),
     "gpt-4o-mini":          ( 0.15,    0.60),
     "gpt-4.1":              ( 2.00,    8.00),
-    "o3":                   ( 10.00,  40.00),
-    # Anthropic
-    "claude-opus-4-8":      (15.00,   75.00),
-    "claude-opus-4-5":      (15.00,   75.00),
+    "o3":                   (10.00,   40.00),
+    # Anthropic — verified 2026-06-03 https://docs.anthropic.com/en/about-claude/pricing
+    "claude-opus-4-8":      ( 5.00,   25.00),  # $5/MTok in, $25/MTok out
+    "claude-opus-4-7":      ( 5.00,   25.00),
+    "claude-opus-4-6":      ( 5.00,   25.00),
+    "claude-opus-4-5":      ( 5.00,   25.00),
+    "claude-opus-4-1":      (15.00,   75.00),  # legacy Opus 4.1
+    "claude-sonnet-4-6":    ( 3.00,   15.00),
     "claude-sonnet-4-5":    ( 3.00,   15.00),
-    "claude-haiku-4-5":     ( 0.80,    4.00),
-    # Google
-    "gemini-3":             ( 7.00,   21.00),
+    "claude-haiku-4-5":     ( 1.00,    5.00),
+    "claude-haiku-3-5":     ( 0.80,    4.00),
+    # Google — verify at https://cloud.google.com/vertex-ai/generative-ai/pricing
+    "gemini-3":             ( 7.00,   21.00),  # unconfirmed — update when published
     "gemini-2.5-pro":       ( 3.50,   10.50),
     "gemini-2.5-flash":     ( 0.15,    0.60),
 }
