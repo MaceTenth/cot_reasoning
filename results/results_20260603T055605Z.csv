@@ -1,0 +1,65 @@
+provider,model,task_id,condition,repeat,passed,error,per_constraint,output
+mock,mock-1,json_cities,direct,0,0,,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,json_cities,cot,0,0,,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,no_commas_haiku,direct,0,1,,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,no_commas_haiku,cot,0,0,,"[{""constraint"": ""no commas"", ""passed"": false}, {""constraint"": ""at least 8 words"", ""passed"": true}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,exactly_three_bullets,direct,0,0,,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,exactly_three_bullets,cot,0,0,,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,all_lowercase,direct,0,0,,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,all_lowercase,cot,0,0,,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,title_and_postscript,direct,0,0,,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,title_and_postscript,cot,0,0,,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,word_cap_30,direct,0,1,,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,word_cap_30,cot,0,0,,"[{""constraint"": ""at most 30 words"", ""passed"": false}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,keywords_required,direct,0,0,,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,keywords_required,cot,0,0,,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,forbidden_words,direct,0,0,,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,forbidden_words,cot,0,1,,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,three_paragraphs_divider,direct,0,0,,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,three_paragraphs_divider,cot,0,0,,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,end_with_phrase,direct,0,0,,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,end_with_phrase,cot,0,0,,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,numbered_five_steps,direct,0,0,,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,numbered_five_steps,cot,0,0,,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,placeholders_email,direct,0,0,,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,placeholders_email,cot,0,0,,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,start_with_word,direct,0,0,,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,start_with_word,cot,0,0,,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,two_sentences,direct,0,0,,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,two_sentences,cot,0,0,,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,highlights,direct,0,0,,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,highlights,cot,0,0,,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."
+mock,mock-1,uppercase_slogan,direct,0,0,,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",Here is a concise answer that addresses the request directly.
+mock,mock-1,uppercase_slogan,cot,0,0,,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]","Let me think about this. First, I need to consider the requirements, weigh the options, and plan my response. Step 1: understand. Step 2: draft.
+
+Final answer: Here is a concise answer that addresses the request directly."

@@ -1,0 +1,636 @@
+provider,model,task_id,condition,repeat,passed,error,prompt_tokens,completion_tokens,per_constraint,output
+openai,gpt-5.5,json_cities,direct,0,1,,95,63,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""New York City"",
+    ""country"": ""United States""
+  },
+  {
+    ""city"": ""São Paulo"",
+    ""country"": ""Brazil""
+  }
+]"
+openai,gpt-5.5,json_cities,direct,1,1,,95,63,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""New York City"",
+    ""country"": ""United States""
+  },
+  {
+    ""city"": ""São Paulo"",
+    ""country"": ""Brazil""
+  }
+]"
+openai,gpt-5.5,json_cities,direct,2,1,,95,63,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""New York City"",
+    ""country"": ""United States""
+  },
+  {
+    ""city"": ""São Paulo"",
+    ""country"": ""Brazil""
+  }
+]"
+openai,gpt-5.5,json_cities,cot,0,1,,87,91,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""Delhi"",
+    ""country"": ""India""
+  },
+  {
+    ""city"": ""Shanghai"",
+    ""country"": ""China""
+  }
+]"
+openai,gpt-5.5,json_cities,cot,1,1,,87,94,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""Delhi"",
+    ""country"": ""India""
+  },
+  {
+    ""city"": ""Shanghai"",
+    ""country"": ""China""
+  }
+]"
+openai,gpt-5.5,json_cities,cot,2,1,,87,97,"[{""constraint"": ""output is valid JSON"", ""passed"": true}]","[
+  {
+    ""city"": ""Tokyo"",
+    ""country"": ""Japan""
+  },
+  {
+    ""city"": ""New York City"",
+    ""country"": ""United States""
+  },
+  {
+    ""city"": ""São Paulo"",
+    ""country"": ""Brazil""
+  }
+]"
+openai,gpt-5.5,no_commas_haiku,direct,0,1,,79,92,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]",The ocean glows beneath the setting sun as waves roll softly toward the shore. Gold and rose light shimmer across the water and the evening air feels calm.
+openai,gpt-5.5,no_commas_haiku,direct,1,1,,79,39,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]",The ocean glows with gold and violet light as waves whisper beneath the fading sun.
+openai,gpt-5.5,no_commas_haiku,direct,2,1,,79,43,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]",The ocean glows beneath the setting sun as gentle waves shimmer with gold and rose light.
+openai,gpt-5.5,no_commas_haiku,cot,0,1,,71,148,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]","Requirements: Write a short ocean sunset description with no commas.
+
+Final: The ocean glows beneath the fading sun as gentle waves shimmer in gold and rose light."
+openai,gpt-5.5,no_commas_haiku,cot,1,1,,71,240,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]","I will keep it short and avoid commas.
+
+The ocean glows beneath a fading sun as gentle waves shimmer with gold and rose light."
+openai,gpt-5.5,no_commas_haiku,cot,2,1,,71,371,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": true}]","Step 1: Keep it short.
+Step 2: Use no commas.
+Step 3: Describe the ocean at sunset.
+
+The ocean glows with gold and rose as the sun sinks below the horizon. Gentle waves shimmer in the fading light and the sky grows calm."
+openai,gpt-5.5,exactly_three_bullets,direct,0,1,,79,76,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 2–3 tasks each day and tackle the most important one first.
+* Work in focused time blocks with short breaks to maintain energy and avoid burnout.
+* Reduce distractions by silencing notifications, clearing your workspace, and batching emails or messages."
+openai,gpt-5.5,exactly_three_bullets,direct,1,1,,79,70,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 3 tasks each day and tackle the most important one first.
+* Work in focused blocks with short breaks to maintain energy and avoid burnout.
+* Minimize distractions by silencing notifications and keeping your workspace organized."
+openai,gpt-5.5,exactly_three_bullets,direct,2,1,,79,74,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 1–3 tasks each day and tackle the most important one first.
+* Use focused work blocks with short breaks to maintain energy and avoid distractions.
+* Review your progress at the end of the day and plan tomorrow’s key tasks in advance."
+openai,gpt-5.5,exactly_three_bullets,cot,0,1,,71,121,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 1–3 tasks each day and tackle the most important one first.
+* Use focused work blocks, such as 25–50 minutes, with short breaks to maintain energy.
+* Reduce distractions by silencing notifications, closing unused tabs, and keeping your workspace organized."
+openai,gpt-5.5,exactly_three_bullets,cot,1,1,,71,109,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 1–3 tasks each day and tackle the most important one first.
+* Work in focused blocks with short breaks, and silence notifications during deep work.
+* Review your progress at the end of the day and adjust tomorrow’s plan accordingly."
+openai,gpt-5.5,exactly_three_bullets,cot,2,1,,71,106,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": true}]","* Prioritize your top 1–3 tasks each day and tackle the most important one first.
+* Use focused work blocks, such as 25–50 minutes, with short breaks in between.
+* Reduce distractions by silencing notifications, keeping your workspace clear, and batching messages."
+openai,gpt-5.5,all_lowercase,direct,0,1,,86,59,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process by which plants, algae, and some bacteria use sunlight, water, and carbon dioxide to make food in the form of sugar. it also releases oxygen as a byproduct."
+openai,gpt-5.5,all_lowercase,direct,1,1,,86,55,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process by which plants, algae, and some bacteria use sunlight to convert carbon dioxide and water into sugar for energy. it also releases oxygen as a byproduct."
+openai,gpt-5.5,all_lowercase,direct,2,1,,86,56,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process by which plants, algae, and some bacteria use sunlight, water, and carbon dioxide to make sugar for energy. it also releases oxygen as a byproduct."
+openai,gpt-5.5,all_lowercase,cot,0,1,,78,108,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process by which plants, algae, and some bacteria use sunlight, water, and carbon dioxide to make food in the form of sugars. it also releases oxygen as a byproduct."
+openai,gpt-5.5,all_lowercase,cot,1,1,,78,96,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process plants, algae, and some bacteria use to turn sunlight, water, and carbon dioxide into sugar for energy, releasing oxygen as a byproduct."
+openai,gpt-5.5,all_lowercase,cot,2,1,,78,106,"[{""constraint"": ""entire response lowercase"", ""passed"": true}]","photosynthesis is the process by which plants, algae, and some bacteria use sunlight, water, and carbon dioxide to make sugar for energy and release oxygen."
+openai,gpt-5.5,title_and_postscript,direct,0,1,,97,47,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","<<Dinner Invitation>>
+
+Hi Alex,
+
+I’d love to have you over for dinner this Friday evening. Let me know if you’re free—I’ll make something delicious!
+
+P.S. Feel free to bring your favorite dessert."
+openai,gpt-5.5,title_and_postscript,direct,1,1,,97,67,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","<<Dinner Invitation>>
+
+Hi Sam,
+
+I’d love to have you over for dinner this Friday evening. Let me know if you can make it!
+
+P.S. Bring your favorite dessert if you’d like."
+openai,gpt-5.5,title_and_postscript,direct,2,1,,97,63,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","<<Dinner Invitation>>
+
+Hi Sam,
+
+I’d love to have you over for dinner this Friday evening. Let me know if you’re free!
+
+P.S. Dessert is on me."
+openai,gpt-5.5,title_and_postscript,cot,0,1,,89,205,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","Requirements: include a title in double angle brackets, invite a friend to dinner, and end with a postscript starting with “P.S.”
+
+<<Dinner Invitation>>
+
+Hi Sam,
+
+I’d love to have you over for dinner this Friday at 7 p.m. It would be great to catch up and enjoy a relaxed evening together.
+
+Hope you can make it!
+
+P.S. Let me know if you have any dietary preferences."
+openai,gpt-5.5,title_and_postscript,cot,1,1,,89,273,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","Requirements: include a title in double angle brackets, invite a friend to dinner, and end with a postscript starting with “P.S.”
+
+<<Dinner Invitation>>
+
+Hi Sam,
+
+I’d love to have you over for dinner this Friday at 7 PM. It’ll be a relaxed evening with good food and plenty of time to catch up. Hope you can make it!
+
+P.S. Let me know if you have any dietary preferences!"
+openai,gpt-5.5,title_and_postscript,cot,2,1,,89,249,"[{""constraint"": ""title in <<...>>"", ""passed"": true}, {""constraint"": ""contains a P.S. postscript"", ""passed"": true}]","Requirements: Include a title in double angle brackets, invite a friend to dinner, keep it brief, and end with a postscript starting with “P.S.”
+
+<<Dinner Invitation>>
+
+Hi Alex,
+
+I’d love to have you over for dinner this Friday at 7. Let me know if you can make it!
+
+Best,  
+Sam
+
+P.S. I’m making your favorite pasta."
+openai,gpt-5.5,word_cap_30,direct,0,1,,76,52,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Two feuding families doom lovers Romeo and Juliet, whose secret marriage, banishment, and tragic misunderstandings lead both to suicide, reconciling their grieving houses."
+openai,gpt-5.5,word_cap_30,direct,1,1,,76,53,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Two feuding families doom lovers Romeo and Juliet, whose secret marriage, misunderstandings, and desperate plans end in their tragic deaths, finally reconciling their grieving families."
+openai,gpt-5.5,word_cap_30,direct,2,1,,76,49,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Two feuding families’ children, Romeo and Juliet, fall in love, secretly marry, and die tragically after misunderstandings, prompting their families to reconcile."
+openai,gpt-5.5,word_cap_30,cot,0,1,,68,239,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Two young lovers from feuding families secretly marry, but misunderstandings and violence lead to their tragic deaths, ending the feud between the Montagues and Capulets."
+openai,gpt-5.5,word_cap_30,cot,1,1,,68,178,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Two young lovers from feuding families secretly marry, but misunderstandings and tragedy lead to their deaths, ending the families’ bitter conflict."
+openai,gpt-5.5,word_cap_30,cot,2,1,,68,355,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": true}]","Requirement: ≤30 words.  
+Romeo and Juliet, lovers from feuding families, secretly marry; misunderstandings and rash choices lead to tragedy, ending their lives and reconciling their families."
+openai,gpt-5.5,keywords_required,direct,0,1,,81,58,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","A healthy breakfast with protein and fiber can help keep you full and focused throughout the morning. Foods like eggs, yogurt, oatmeal, fruit, and whole-grain toast provide steady energy to start the day."
+openai,gpt-5.5,keywords_required,direct,1,1,,81,57,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","A healthy breakfast with protein and fiber can help keep you full and support steady energy throughout the morning. Try eggs or yogurt with whole-grain toast, fruit, or oatmeal for a balanced start."
+openai,gpt-5.5,keywords_required,direct,2,1,,81,61,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","A healthy breakfast with protein and fiber can help keep you full and focused throughout the morning. Foods like eggs, yogurt, oatmeal, and fruit provide steady energy to start the day well."
+openai,gpt-5.5,keywords_required,cot,0,1,,73,247,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","Requirements: 2 sentences; healthy breakfasts; include “protein,” “fiber,” and “energy.”
+
+A healthy breakfast with protein, fiber, and whole grains can help you feel full and focused. Foods like eggs, Greek yogurt, fruit, and oatmeal provide steady energy for the morning."
+openai,gpt-5.5,keywords_required,cot,1,1,,73,152,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","A healthy breakfast with protein and fiber can help keep you full and focused. Foods like eggs, Greek yogurt, oats, fruit, and nuts provide steady energy for the morning."
+openai,gpt-5.5,keywords_required,cot,2,1,,73,287,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": true}]","A healthy breakfast should include protein and fiber to help provide steady energy. Good options include Greek yogurt with berries, eggs with whole-grain toast, or oatmeal topped with nuts."
+openai,gpt-5.5,forbidden_words,direct,0,1,,83,207,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","A gentle weekend begins with sunlight through the curtains, fresh coffee, and a slow morning with no schedule. A walk by the water fills the afternoon, followed by a favorite book, soft music, and a simple homemade meal. As evening arrives, candles glow, blankets feel warm, and the day ends with a good film and an easy sense of contentment."
+openai,gpt-5.5,forbidden_words,direct,1,1,,83,230,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","A gentle weekend begins with sleeping in, sunlight slipping through the curtains, and the smell of fresh coffee in the kitchen. The morning moves slowly: a warm shower, soft music, and a simple breakfast enjoyed without checking the clock.
+
+Later, there’s a walk through a quiet park, leaves shifting in the breeze and birds calling from the trees. An afternoon is spent with a good book, a cozy blanket, and tea beside a window. Dinner is something easy and comforting, followed by a favorite film and the glow of candles.
+
+On Sunday, there’s time for fresh sheets, a homemade brunch, and a little wandering through a local market. The day ends with a long bath, clean pajamas, and the feeling that everything can wait until tomorrow."
+openai,gpt-5.5,forbidden_words,direct,2,1,,83,231,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","Saturday begins with sunlight through the curtains, fresh coffee, and a slow breakfast by an open window. The morning drifts into a quiet walk along tree-lined streets, with birdsong, warm air, and no schedule to follow. Later, there’s time for a good book, a simple lunch, and an afternoon nap under a soft blanket.
+
+Sunday brings pancakes, gentle music, and a few hours in the garden or at a nearby park. The day ends with a warm bath, a favorite movie, and a cozy dinner as the sky turns gold, leaving everything feeling unhurried and easy."
+openai,gpt-5.5,forbidden_words,cot,0,1,,75,678,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","Plan: I’ll describe a Saturday and Sunday with gentle pacing, cozy activities, nature, good food, and unhurried moments, while omitting the prohibited terms.
+
+Saturday begins with sunlight slipping through the curtains, a warm mug of tea, and no alarms. A slow walk through a leafy park follows, with birdsong overhead and the scent of fresh bread drifting from a nearby bakery. The afternoon is for reading on the sofa, making a simple soup, and listening to soft music while rain taps the window.
+
+Sunday moves at the same easy pace: pancakes in the morning, a visit to a quiet garden, and a little time spent journaling or sketching. As evening arrives, the lights are dimmed, a favorite film plays, and the coming week feels far away."
+openai,gpt-5.5,forbidden_words,cot,1,1,,75,1194,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","Reasoning: The piece should evoke an easygoing weekend through sensory details, gentle pacing, and simple pleasures, while avoiding the three blocked terms.
+
+Final answer:
+
+Saturday begins with soft light through the curtains, warm coffee, and music playing low. There is no hurry: a slow walk by the water, a visit to a small bookshop, and lunch on a sunny patio fill the day. In the evening, candles glow while a simple dinner simmers, followed by a favorite film and a blanket on the sofa.
+
+Sunday brings fresh sheets, pancakes, and a little time in the garden. The afternoon drifts by with reading, tea, and the sound of rain tapping the window. By night, everything feels lighter, as if the whole weekend has made room to breathe."
+openai,gpt-5.5,forbidden_words,cot,2,1,,75,639,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": true}]","Step-by-step:
+1. Choose slow, soothing activities.
+2. Add sensory details like warm drinks, soft light, and quiet sounds.
+3. Keep the mood unhurried and peaceful.
+
+A lovely weekend begins with sunlight slipping through the curtains and a mug of tea warming your hands. Saturday brings a gentle walk through the park, a favorite book by the window, and an easy dinner with good music playing softly. Sunday moves at its own pace: fluffy pancakes, a long bath, fresh sheets, and an evening spent watching the sky turn gold. By night, everything feels lighter."
+openai,gpt-5.5,three_paragraphs_divider,direct,0,1,,88,199,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","Exercise supports physical health by strengthening the heart, improving circulation, and helping maintain a healthy weight. Regular movement can also build muscle, increase flexibility, strengthen bones, and reduce the risk of chronic conditions such as type 2 diabetes, high blood pressure, and certain forms of heart disease.
+
+***
+Exercise also benefits mental and emotional well-being. Physical activity can reduce stress, improve mood, boost confidence, and support better sleep. It may also help sharpen focus and increase energy throughout the day by improving blood flow and encouraging the release of feel-good brain chemicals.
+
+***
+Beyond health, exercise can improve quality of life by making daily tasks easier and supporting long-term independence. Whether it is walking, swimming, cycling, dancing, or strength training, consistent activity can create a sense of routine, accomplishment, and resilience that benefits both body and mind."
+openai,gpt-5.5,three_paragraphs_divider,direct,1,1,,88,223,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","Exercise supports physical health by strengthening the heart, improving circulation, and helping maintain a healthy weight. Regular movement can lower the risk of chronic conditions such as heart disease, type 2 diabetes, and high blood pressure. It also builds stronger muscles and bones, improves flexibility, and increases overall energy levels.
+
+***
+
+Exercise also benefits mental and emotional well-being. Physical activity can reduce stress, improve mood, and support better sleep by helping regulate the body’s natural rhythms. It may also boost confidence and provide a sense of accomplishment, especially when progress becomes noticeable over time.
+
+***
+
+In addition, exercise can improve daily quality of life. Greater strength, endurance, and balance make everyday tasks easier and can help people stay independent as they age. Whether through walking, cycling, swimming, sports, or simple home workouts, consistent exercise is a practical way to support long-term health and well-being."
+openai,gpt-5.5,three_paragraphs_divider,direct,2,1,,88,235,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","Exercise strengthens the body by improving cardiovascular health, building muscle, supporting bone density, and increasing flexibility. Regular physical activity can help reduce the risk of chronic conditions such as heart disease, type 2 diabetes, and high blood pressure. It also supports better balance and mobility, making everyday tasks easier and helping maintain independence over time.
+
+***
+Exercise also benefits mental and emotional well-being. It can reduce stress, improve mood, boost self-confidence, and help manage symptoms of anxiety and depression. Physical activity encourages the release of endorphins, which can create a sense of calm and positivity, and it often improves sleep quality as well.
+
+***
+In addition, exercise can increase energy levels and support healthy weight management. It provides structure, encourages discipline, and can be a social activity when done with others through walking groups, sports, or fitness classes. Even moderate movement, such as brisk walking or cycling, can make a meaningful difference when practiced consistently."
+openai,gpt-5.5,three_paragraphs_divider,cot,0,1,,80,408,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","This response follows the requirements by using exactly three paragraphs, separated by lines containing only three asterisks. Exercise has many benefits for the body and mind, making it one of the most valuable habits for overall health.
+
+***
+Regular exercise strengthens the heart, muscles, and bones while improving endurance, flexibility, and balance. It can help manage weight, support healthy blood pressure, improve circulation, and reduce the risk of chronic conditions such as heart disease, type 2 diabetes, and some forms of cancer.
+
+***
+Exercise also benefits mental and emotional well-being. Physical activity can reduce stress, improve mood, support better sleep, and boost confidence. Over time, it can increase energy levels, sharpen focus, and create a stronger sense of discipline and resilience."
+openai,gpt-5.5,three_paragraphs_divider,cot,1,1,,80,352,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","Exercise strengthens the heart, lungs, muscles, and bones, helping the body work more efficiently. Regular movement can improve endurance, flexibility, balance, and overall energy levels, making daily tasks easier and reducing the risk of many chronic diseases.
+***
+Exercise also supports mental health. Physical activity can reduce stress, improve mood, boost confidence, and help with better sleep by releasing chemicals in the brain that promote relaxation and well-being.
+***
+In addition, exercise can improve long-term quality of life. It supports healthy weight management, increases independence as people age, and can provide social benefits when done with others through sports, classes, or walking groups."
+openai,gpt-5.5,three_paragraphs_divider,cot,2,1,,80,262,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": true}]","Exercise strengthens the body by improving cardiovascular health, building muscle, supporting bone density, and helping maintain a healthy weight. Regular movement can also reduce the risk of chronic conditions such as heart disease, type 2 diabetes, and high blood pressure.
+
+***
+Exercise also benefits mental and emotional well-being. Physical activity can reduce stress, improve mood, boost self-esteem, and support better sleep. Over time, it may also help sharpen focus and increase overall energy levels.
+
+***
+Beyond health, exercise can improve daily life by making routine tasks easier and increasing endurance. It can also provide opportunities for social connection through sports, classes, or walking groups, making it a valuable habit for both body and mind."
+openai,gpt-5.5,end_with_phrase,direct,0,1,,79,155,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","Every small step forward proves your strength and brings your dream closer, so Keep going."
+openai,gpt-5.5,end_with_phrase,direct,1,1,,79,153,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","When the path feels steep, remember that every step builds strength—Keep going."
+openai,gpt-5.5,end_with_phrase,direct,2,1,,79,167,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","When the path feels steep, remember that every step forward is proof of your strength—Keep going."
+openai,gpt-5.5,end_with_phrase,cot,0,1,,71,126,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","Every small step forward is proof that you have the strength to rise, grow, and Keep going."
+openai,gpt-5.5,end_with_phrase,cot,1,1,,71,185,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","Every small step forward is proof that you are stronger than yesterday, so Keep going."
+openai,gpt-5.5,end_with_phrase,cot,2,1,,71,126,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": true}]","Every small step you take today builds the strength for tomorrow, so trust your path and Keep going."
+openai,gpt-5.5,numbered_five_steps,direct,0,1,,90,134,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Place a rectangular sheet of paper flat in front of you, then fold it in half lengthwise and crease it well.
+2. Open the paper back up, then fold the top two corners down to meet the center crease.
+3. Fold the new angled top edges down again so they meet the center crease, making a narrow point.
+4. Fold the paper in half along the original center crease, keeping the folded edges on the outside.
+5. Fold each side down to form wings, crease firmly, then hold the bottom and gently throw it forward."
+openai,gpt-5.5,numbered_five_steps,direct,1,1,,90,120,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Start with a rectangular sheet of paper and fold it in half lengthwise, then unfold it to make a center crease.
+2. Fold the top two corners inward so they meet at the center crease, forming a triangle at the top.
+3. Fold the new slanted edges inward again so they meet along the center crease, making a sharper point.
+4. Fold the paper in half along the original center crease, with the folded edges on the outside.
+5. Fold each side down to create wings, making both wings even, then hold the bottom center and throw gently."
+openai,gpt-5.5,numbered_five_steps,direct,2,1,,90,98,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Start with a rectangular sheet of paper and place it vertically on a flat surface.
+2. Fold the paper in half lengthwise, crease it firmly, then unfold it.
+3. Fold the top two corners down to meet the center crease, forming a point.
+4. Fold the new angled edges in again toward the center crease to make a sharper nose.
+5. Fold the paper in half along the center crease, then fold each side down to form the wings."
+openai,gpt-5.5,numbered_five_steps,cot,0,1,,82,214,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Place a sheet of paper flat in portrait orientation, then fold it in half lengthwise and unfold it to make a center crease.
+2. Fold the top two corners down so they meet at the center crease, forming a point.
+3. Fold the new slanted edges inward again so they meet at the center crease, making a sharper point.
+4. Fold the paper in half along the center crease, with the folded edges on the outside.
+5. Fold each side down to form wings, then hold the bottom and gently throw the airplane forward."
+openai,gpt-5.5,numbered_five_steps,cot,1,1,,82,192,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Start with a rectangular sheet of paper and place it flat in front of you.
+
+2. Fold the paper in half lengthwise, crease it well, then unfold it.
+
+3. Fold the top two corners down so they meet at the center crease, forming a point.
+
+4. Fold the new slanted edges toward the center crease again to make a narrower point.
+
+5. Fold the paper in half along the original crease, then fold each side down to create wings."
+openai,gpt-5.5,numbered_five_steps,cot,2,1,,82,198,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": true}]","1. Start with a rectangular sheet of paper and fold it in half lengthwise, then unfold it to make a center crease.
+
+2. Fold the top two corners inward so they meet at the center crease, forming a point.
+
+3. Fold the new slanted edges inward again so they meet along the center crease, making a sharper nose.
+
+4. Fold the paper in half along the original center crease, with the folded flaps on the outside.
+
+5. Fold each side down to create wings, then hold the bottom center and gently throw the airplane forward."
+openai,gpt-5.5,placeholders_email,direct,0,1,,87,51,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Subject: Meeting Confirmation
+
+Hi [name],
+
+This email confirms our meeting on [date] at [time]. We’ll be discussing [topic].
+
+Please let me know if you need to make any changes.
+
+Best,  
+[your name]"
+openai,gpt-5.5,placeholders_email,direct,1,1,,87,53,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Subject: Meeting Confirmation
+
+Hi [name],
+
+This email confirms our meeting on [date] at [time]. We’ll meet at [location] to discuss [topic].
+
+Please let me know if anything changes.
+
+Best regards,  
+[your name]"
+openai,gpt-5.5,placeholders_email,direct,2,1,,87,57,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Subject: Meeting Confirmation
+
+Hi [name],
+
+I’m writing to confirm our meeting scheduled for [date] at [time]. We will be meeting at [location] to discuss [topic].
+
+Please let me know if anything changes.
+
+Best regards,  
+[your name]"
+openai,gpt-5.5,placeholders_email,cot,0,1,,79,158,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Requirements:
+- Short template email
+- Confirms a meeting
+- Includes at least three placeholders in square brackets
+
+Template:
+
+Subject: Meeting Confirmation for [date]
+
+Hi [name],
+
+I’m writing to confirm our meeting on [date] at [time]. We’ll be meeting at [location] to discuss [topic].
+
+Please let me know if anything changes.
+
+Best,  
+[your name]"
+openai,gpt-5.5,placeholders_email,cot,1,1,,79,165,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Reasoning:
+- The email should be short and confirm a meeting.
+- It should include at least three placeholders in square brackets.
+- Placeholders can include [name], [date], [time], [location], or [meeting topic].
+
+Template:
+
+Subject: Meeting Confirmation
+
+Hi [name],
+
+I’m writing to confirm our meeting on [date] at [time] to discuss [meeting topic]. We will meet at [location].
+
+Looking forward to speaking with you.
+
+Best,  
+[your name]"
+openai,gpt-5.5,placeholders_email,cot,2,1,,79,184,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": true}]","Brief reasoning:
+- The email should confirm a meeting.
+- It should be short and professional.
+- It should include at least three placeholders in square brackets.
+
+Template email:
+
+Subject: Meeting Confirmation for [date]
+
+Hi [name],
+
+I’m writing to confirm our meeting on [date] at [time]. We will meet at [location] to discuss [topic].
+
+Please let me know if anything changes.
+
+Best,  
+[your name]"
+openai,gpt-5.5,start_with_word,direct,0,1,,78,67,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it helps your body repair itself, supports brain function and memory, strengthens the immune system, regulates mood and hormones, improves focus and decision-making, and lowers the risk of health problems such as heart disease, diabetes, and depression."
+openai,gpt-5.5,start_with_word,direct,1,1,,78,80,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it allows the body and brain to rest, repair, and recharge. It supports memory, learning, mood, immune function, hormone balance, heart health, and overall energy. Getting enough quality sleep also improves focus, decision-making, and physical recovery while reducing the risk of illness and stress."
+openai,gpt-5.5,start_with_word,direct,2,1,,78,62,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it helps your body repair itself, supports brain function, strengthens memory and learning, regulates mood, boosts the immune system, balances hormones, and helps maintain overall physical and mental health."
+openai,gpt-5.5,start_with_word,cot,0,1,,70,138,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it helps your body and brain recover, repair, and function well. During sleep, your brain processes memories, supports learning, regulates mood, and clears waste products. Your body also repairs tissues, strengthens the immune system, balances hormones, and restores energy. Getting enough sleep can improve focus, decision-making, emotional health, and overall physical well-being."
+openai,gpt-5.5,start_with_word,cot,1,1,,70,146,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it helps your body and brain recover, repair, and function well. It supports memory, learning, mood regulation, immune health, hormone balance, and energy levels. Getting enough sleep also improves focus, decision-making, and physical performance while lowering the risk of health problems like heart disease, diabetes, and depression."
+openai,gpt-5.5,start_with_word,cot,2,1,,70,183,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": true}]","Sleep is important because it helps your body and brain recover and function well.
+
+1. It restores energy and supports physical repair.
+2. It helps the brain process memories and learn.
+3. It strengthens the immune system.
+4. It supports mood, focus, and decision-making.
+5. It helps regulate hormones, appetite, and overall health.
+
+In short, sleep is essential for staying healthy, thinking clearly, and feeling your best."
+openai,gpt-5.5,two_sentences,direct,0,1,,69,60,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","My favorite season is autumn, when the air turns crisp and the trees glow with warm colors. I love the cozy feeling of sweaters, hot drinks, and quiet walks under falling leaves."
+openai,gpt-5.5,two_sentences,direct,1,1,,69,64,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","My favorite season is autumn, when the air turns crisp and the trees glow with red, orange, and gold. I love the cozy feeling of sweaters, warm drinks, and quiet walks under falling leaves."
+openai,gpt-5.5,two_sentences,direct,2,1,,69,62,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","My favorite season is autumn, when the air turns crisp and the trees glow with warm colors. I love the cozy feeling of cool evenings, soft sweaters, and the quiet beauty of falling leaves."
+openai,gpt-5.5,two_sentences,cot,0,1,,61,104,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","My favorite season is autumn because the air turns crisp and the trees glow with warm colors. It feels peaceful and refreshing, perfect for walks, cozy sweaters, and quiet evenings."
+openai,gpt-5.5,two_sentences,cot,1,1,,61,175,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","The request calls for exactly two sentences, so I will describe autumn as my favorite season. I love autumn for its crisp air, golden leaves, cozy evenings, and the quiet feeling of change it brings."
+openai,gpt-5.5,two_sentences,cot,2,1,,61,145,"[{""constraint"": ""exactly 2 sentences"", ""passed"": true}]","My favorite season is autumn, when the air turns crisp and the trees glow with red, orange, and gold. I love the cozy feeling of cool evenings, warm drinks, and the quiet beauty of leaves drifting down."
+openai,gpt-5.5,highlights,direct,0,1,,84,106,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","I recommend *Project Hail Mary* by Andy Weir. It’s a gripping science-fiction novel with *smart problem-solving*, genuine humor, and a surprisingly emotional story about *friendship and survival*. If you enjoy fast-paced books that mix science, suspense, and heart, this is an excellent choice."
+openai,gpt-5.5,highlights,direct,1,1,,84,110,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","I recommend *Project Hail Mary* by Andy Weir. It’s a smart, fast-paced science-fiction novel with *high-stakes problem solving*, *memorable humor*, and a surprisingly emotional story about cooperation, survival, and friendship."
+openai,gpt-5.5,highlights,direct,2,1,,84,104,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","I recommend *Project Hail Mary* by Andy Weir. It’s a fast-paced, clever science-fiction novel with *high-stakes problem solving*, memorable humor, and a surprisingly emotional core. If you enjoy stories about survival, science, and *unexpected friendship*, this book is both entertaining and genuinely uplifting."
+openai,gpt-5.5,highlights,cot,0,1,,76,266,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","**Reasoning through the requirements:**
+1. You asked for a book recommendation.
+2. You asked me to explain why I recommend it.
+3. You requested at least two key phrases highlighted with markdown asterisks, like *this*.
+
+**Recommendation:**  
+I recommend *The Midnight Library* by Matt Haig.
+
+It’s a thoughtful, accessible novel about regret, possibility, and what makes life meaningful. The story follows Nora Seed, who gets the chance to explore different versions of her life based on choices she could have made. I recommend it because it combines an engaging premise with *emotional depth* and *thought-provoking themes* without feeling overly heavy.
+
+If you enjoy books that are reflective, hopeful, and easy to read, *The Midnight Library* is a strong choice."
+openai,gpt-5.5,highlights,cot,1,1,,76,177,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","I recommend *Project Hail Mary* by Andy Weir.
+
+Why: it’s a *fast-paced science fiction adventure* with a clever mix of humor, suspense, and problem-solving. The story follows a lone astronaut who must figure out how to save Earth, and it stays engaging because every discovery leads to a new challenge. It’s especially good if you enjoy *smart characters solving difficult problems* in creative ways.
+
+If you liked *The Martian*, this is a great next read."
+openai,gpt-5.5,highlights,cot,2,1,,76,210,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": true}]","Reasoning through the requirements:
+1. Recommend one book.
+2. Explain why it is worth reading.
+3. Highlight at least two key phrases using markdown asterisks.
+
+Recommendation: ***Project Hail Mary*** by Andy Weir.
+
+I recommend it because it is a fast-paced, clever science fiction novel with a strong emotional core. The story combines *scientific problem-solving* with *genuine human warmth*, making it both intellectually fun and surprisingly moving. If you enjoy books that are adventurous, funny, and full of satisfying “aha” moments, this is an excellent choice."
+openai,gpt-5.5,uppercase_slogan,direct,0,1,,79,27,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]",WAKE UP TO SOMETHING WONDERFUL
+openai,gpt-5.5,uppercase_slogan,direct,1,1,,79,29,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]","BREWING JOY, ONE CUP AT A TIME"
+openai,gpt-5.5,uppercase_slogan,direct,2,1,,79,17,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]","WAKE UP TO WARMTH, ONE CUP AT A TIME."
+openai,gpt-5.5,uppercase_slogan,cot,0,1,,71,109,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]","REQUIREMENTS: A COFFEE SHOP SLOGAN THAT IS MEMORABLE, WARM, AND ENERGIZING.
+
+SLOGAN: BREWING JOY, ONE CUP AT A TIME."
+openai,gpt-5.5,uppercase_slogan,cot,1,1,,71,121,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]","REQUIREMENTS: CREATE A COFFEE SHOP SLOGAN IN ALL CAPITAL LETTERS.
+
+SLOGAN: BREWING JOY, ONE CUP AT A TIME."
+openai,gpt-5.5,uppercase_slogan,cot,2,1,,71,112,"[{""constraint"": ""entire response uppercase"", ""passed"": true}]","REQUIREMENTS: CREATE A SHORT, MEMORABLE COFFEE SHOP SLOGAN IN ALL CAPITAL LETTERS.
+
+SLOGAN: BREWING JOY, ONE CUP AT A TIME."
+anthropic,claude-opus-4-8,json_cities,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCHTqLNAc2MLVFTN9M'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,json_cities,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCK3LFSBHrhkL1nrgN'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,json_cities,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCLBJM9BiRTog2TAu8'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,json_cities,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCMJGXJYVxbWGzzNzm'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,json_cities,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCNVhbcnkFHYS6rejJ'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,json_cities,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCPdfNvK5GK3zEfWx4'}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCRLMYu9UPHsovZRv1'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCSZ2g3SwsF96qppjb'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCTmhYTexBpN1D2RFQ'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCUvevj59hxQtXJMwq'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCW3dCLzkwPH4W2Lnp'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,no_commas_haiku,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCXFoLDo3253RoSBYS'}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCYN2Xxnwxhw7Jj4Af'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCZUVwnTeim7XWUcaM'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCafSAnV2pEMzQYPWZ'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCbrNdirDGpr91agqK'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCd3Jib7hJA5pyWu8H'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,exactly_three_bullets,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCeFUzQSAbezJYfjLz'}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCfSRinFfuNS9Mhdqi'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCgaP9RabLKAnPCQk7'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftChkafjBVCGXdiCr5w'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCk3VYoKmw3finLPN4'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCmEg6xS3nxEjwo3bp'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,all_lowercase,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCnRchzyESxhwaJuSK'}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCoaZwtkKr7PcbTQM6'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCpoVRBirexjntEB6N'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCr3QHeFAFUWQkd9kH'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCsBrY9bGQ35LviAjH'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCtP3KSoXLkWh3NCCt'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,title_and_postscript,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCuqc2PEFP5n3QC6wi'}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCw13rJYsKBfJq7qzv'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCxBVcc4xyCSrmJXzD'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCyJxdZRNKJVFQao8F'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftCzgoqsmXRosZFQ6oq'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD1pX4qEK8RnnF9592'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,word_cap_30,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD2yyBYwda2hacmctX'}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD4EsZ8SdWHPePBLEt'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD5Pphecp1bvHVJ2Wu'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD6X3T9WJSLAVVtSQ5'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD7hjHVxrVLay76MQu'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftD97ZXUNgT72hXu5MV'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,keywords_required,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDAF2Y49wxWmJ1Bc7c'}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDBPVJSEw1X1xviBYL'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDCXwubtdypeKPKUEr'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDDidYXNgchACurpXj'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDErbe4ug8p9EEq6rg'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDFyZotDWaGf2tRFXy'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,forbidden_words,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDHKvngyWf2Pv1AZAs'}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDJUNtxfaUzy4ewkWC'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDKdao3xeWCSYTDJkD'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDLkZ1MtBxYnkARi5g'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDMr32875ACyTtorr9'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDP1V17ctWxHZ6nAgn'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,three_paragraphs_divider,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDQTYiprQfzX6x5YMH'}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDRZmhfyxcZvN6CYQz'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDShyhHbb9T1TDAVT6'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDTyNxJh1LQcGzb4Rh'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDWhLmFcJBNRpdfKP8'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDXzjHYhpmkUFeWTGM'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,end_with_phrase,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDZCQepNKJP6yCP4s5'}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDaN6uYQSybMiLgZeY'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDbYJMc4f1TZRk4MYE'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDgDq3a7jExoPk7fZF'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDhmr4zzWU8FVgEDD6'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDivJisvZ1WTnzUxiq'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,numbered_five_steps,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDk7Eo9Q1rcXTqQcFN'}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDmGSRKrySS1HKcPjb'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDnPA9YVe34Ugkm8k9'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDoYNF1nLiVGVzR1ss'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDpeLfNqFwy8qjWFbs'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDqmZXdc7nSoKXxJpZ'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,placeholders_email,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDrwW6tq7Nh54bUreT'}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDt6DAocqo2YmsUwqu'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDuDvSRKMd6ktgcDpQ'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDvLeRVZcJNC8ANiAJ'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDwX5xH88VpMPrrRkK'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDxd4hoyJZEfKwUxkN'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,start_with_word,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDyk2hUA72aaunJXF1'}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftDzsFJVPaFNc65wWqv'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE2LJZLFhYA1QMX9WB'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE3gfHo2fkySPAoHzn'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE4psXKPqJERyBM8kw'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE5zKUyT1nLygL5HaW'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,two_sentences,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE7BG4wK9QTVxikcr1'}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE8HjZWZR819UDpPRj'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftE9QTGBjsobgbznyHS'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEAYuuBjo1SJfZnp6W'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEBhcZP4CmvSAWur8c'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftECrKkspdJrHM4UGYZ'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,highlights,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEDy3PpnBBurZrqiHB'}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,direct,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEFcGS86csXV21DmVv'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,direct,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEGizDAjgfsc9rgUkS'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,direct,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEJ8KaJAfnuxPZ6L2h'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,cot,0,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEKskLZkvyqrXo5x78'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,cot,1,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftEM2hWC8qAJYNUqn2k'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+anthropic,claude-opus-4-8,uppercase_slogan,cot,2,0,"BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CbftENDdiKt6FPyRkVB9e'}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,json_cities,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,json_cities,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,json_cities,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,json_cities,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,json_cities,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,json_cities,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""output is valid JSON"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,no_commas_haiku,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""no commas"", ""passed"": true}, {""constraint"": ""at least 8 words"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,exactly_three_bullets,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 bullet points"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,all_lowercase,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response lowercase"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,title_and_postscript,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""title in <<...>>"", ""passed"": false}, {""constraint"": ""contains a P.S. postscript"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,word_cap_30,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at most 30 words"", ""passed"": true}, {""constraint"": ""at least 5 words"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,keywords_required,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""contains 'protein', 'fiber', 'energy'"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,forbidden_words,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""avoids 'relax'/'rest'/'calm'"", ""passed"": true}, {""constraint"": ""at least 15 words"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,three_paragraphs_divider,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 3 paragraphs separated by ***"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,end_with_phrase,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""ends with 'Keep going.'"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,numbered_five_steps,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 5 numbered steps"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,placeholders_email,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 3 [bracketed] placeholders"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,start_with_word,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""starts with the word 'Sleep'"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,two_sentences,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""exactly 2 sentences"", ""passed"": false}]",
+gemini,gemini-3,highlights,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,highlights,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,highlights,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,highlights,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,highlights,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,highlights,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""at least 2 *highlighted* phrases"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,direct,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,direct,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,direct,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,cot,0,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,cot,1,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
+gemini,gemini-3,uppercase_slogan,cot,2,0,"ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3 is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",0,0,"[{""constraint"": ""entire response uppercase"", ""passed"": false}]",
